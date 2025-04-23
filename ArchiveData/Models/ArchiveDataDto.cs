@@ -14,4 +14,11 @@ namespace ArchiveData.Models
         public string ParameterName { get; set; }
 
     }
+    public class MultiArchiveDataDto
+    {
+        public List<ArchiveDataPackets> ArchiveDataPackets { get; set; }
+        public int UavNumber { get; set; }
+        public string Communication { get; set; }
+
+    }
 }

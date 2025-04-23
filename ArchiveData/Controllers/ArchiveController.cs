@@ -63,5 +63,26 @@ namespace ArchiveData.Controllers
             }
 
         }
+
+        [HttpPost("getMultiArchiveData")]
+        public async Task<ActionResult<List<MultiArchiveDataDto>>> MultiArchiveData([FromBody] ArchiveMultiRequestDto archiveDto)
+        {
+            try
+            {
+
+                List<MultiArchiveDataDto> archivedUAVsDataList = await ArchiveService.GetMultiArchiveData(archiveDto);
+
+                if (archivedUAVsDataList == null || archivedUAVsDataList.Count == 0)
+                {
+                    return NotFound("No uavs found.");
+                }
+                return Ok(archivedUAVsDataList);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, "server error: " + ex.Message);
+            }
+
+        }
     }
 }
