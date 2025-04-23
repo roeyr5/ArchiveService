@@ -21,10 +21,9 @@ namespace ArchiveData.Services
         public async Task<List<ArchiveDataDto>> GetArchiveData(ArchiveRequestDto archiveDto)
         {
             List<ArchiveDataDto> archivedUAVsDataList = new();
-
+            archiveDto.StartDate = TimeZoneInfo.ConvertTime(archiveDto.StartDate, TimeZoneInfo.FindSystemTimeZoneById("Israel Standard Time"));
             foreach (int uavNumber in archiveDto.UavNumbers)
             {
-                Console.WriteLine(uavNumber);
 
                 var collection = database.GetCollection<BsonDocument>(uavNumber.ToString());
 
@@ -39,12 +38,13 @@ namespace ArchiveData.Services
 
                 var result = await collection.Find(filter).Skip(skipCount).Limit(limitCount).ToListAsync();
 
-                Console.WriteLine(result);
-
                 var archiveDataPackets = result.Select(doc => new ArchiveDataPacket
                 {
-                    UavData = doc["Data"].AsBsonDocument.ToDictionary(k => k.Name, v => v.Value.ToString()),
+                    Value = doc["Data"].AsBsonDocument.Contains(archiveDto.ParameterName) ?
+                   doc["Data"].AsBsonDocument[archiveDto.ParameterName].ToString() : null,
                     DateTime = doc["TimeStamp"].ToUniversalTime(),
+                    UavNumber = uavNumber
+
                 }).ToList();
 
                 ArchiveDataDto uavArchivedData = new()

@@ -12,7 +12,6 @@ C:\Users\roey9\Desktop\ArchiveData\ArchiveData\bin\Debug\net5.0\ArchiveData.deps
 C:\Users\roey9\Desktop\ArchiveData\ArchiveData\bin\Debug\net5.0\ArchiveData.runtimeconfig.json
 C:\Users\roey9\Desktop\ArchiveData\ArchiveData\bin\Debug\net5.0\ArchiveData.runtimeconfig.dev.json
 C:\Users\roey9\Desktop\ArchiveData\ArchiveData\bin\Debug\net5.0\ArchiveData.dll
-C:\Users\roey9\Desktop\ArchiveData\ArchiveData\bin\Debug\net5.0\ref\ArchiveData.dll
 C:\Users\roey9\Desktop\ArchiveData\ArchiveData\bin\Debug\net5.0\ArchiveData.pdb
 C:\Users\roey9\Desktop\ArchiveData\ArchiveData\bin\Debug\net5.0\AWSSDK.Core.dll
 C:\Users\roey9\Desktop\ArchiveData\ArchiveData\bin\Debug\net5.0\AWSSDK.SecurityToken.dll
@@ -32,11 +31,12 @@ C:\Users\roey9\Desktop\ArchiveData\ArchiveData\bin\Debug\net5.0\runtimes\linux\n
 C:\Users\roey9\Desktop\ArchiveData\ArchiveData\bin\Debug\net5.0\runtimes\osx\native\libmongocrypt.dylib
 C:\Users\roey9\Desktop\ArchiveData\ArchiveData\bin\Debug\net5.0\runtimes\win\native\mongocrypt.dll
 C:\Users\roey9\Desktop\ArchiveData\ArchiveData\obj\Debug\net5.0\staticwebassets\ArchiveData.StaticWebAssets.Manifest.cache
-C:\Users\roey9\Desktop\ArchiveData\ArchiveData\obj\Debug\net5.0\staticwebassets\ArchiveData.StaticWebAssets.xml
 C:\Users\roey9\Desktop\ArchiveData\ArchiveData\obj\Debug\net5.0\scopedcss\bundle\ArchiveData.styles.css
 C:\Users\roey9\Desktop\ArchiveData\ArchiveData\obj\Debug\net5.0\ArchiveData.RazorTargetAssemblyInfo.cache
-C:\Users\roey9\Desktop\ArchiveData\ArchiveData\obj\Debug\net5.0\ArchiveData.csproj.CopyComplete
 C:\Users\roey9\Desktop\ArchiveData\ArchiveData\obj\Debug\net5.0\ArchiveData.dll
 C:\Users\roey9\Desktop\ArchiveData\ArchiveData\obj\Debug\net5.0\ref\ArchiveData.dll
 C:\Users\roey9\Desktop\ArchiveData\ArchiveData\obj\Debug\net5.0\ArchiveData.pdb
 C:\Users\roey9\Desktop\ArchiveData\ArchiveData\obj\Debug\net5.0\ArchiveData.genruntimeconfig.cache
+C:\Users\roey9\Desktop\ArchiveData\ArchiveData\bin\Debug\net5.0\ref\ArchiveData.dll
+C:\Users\roey9\Desktop\ArchiveData\ArchiveData\obj\Debug\net5.0\staticwebassets\ArchiveData.StaticWebAssets.xml
+C:\Users\roey9\Desktop\ArchiveData\ArchiveData\obj\Debug\net5.0\ArchiveData.csproj.CopyComplete

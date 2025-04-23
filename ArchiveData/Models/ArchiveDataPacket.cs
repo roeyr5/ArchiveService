@@ -8,8 +8,9 @@ namespace ArchiveData.Models
 {
     public class ArchiveDataPacket
     {
-        public Dictionary<string, string> UavData { get; set; }
+        public string Value { get; set; }
         public DateTime DateTime { get; set; }
+        public int UavNumber { get; set; }
 
     }
 }

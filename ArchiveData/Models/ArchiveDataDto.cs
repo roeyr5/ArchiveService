@@ -11,6 +11,7 @@ namespace ArchiveData.Models
         public List<ArchiveDataPacket> ArchiveDataPackets { get; set; }
         public int UavNumber { get; set; }
         public string Communication { get; set; }
+        public string ParameterName { get; set; }
 
     }
 }

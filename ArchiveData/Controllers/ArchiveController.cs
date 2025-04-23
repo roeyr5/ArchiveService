@@ -48,6 +48,7 @@ namespace ArchiveData.Controllers
         {
             try
             {
+
                 List<ArchiveDataDto> archivedUAVsDataList = await ArchiveService.GetArchiveData(archiveDto);
 
                 if (archivedUAVsDataList == null || archivedUAVsDataList.Count == 0)
