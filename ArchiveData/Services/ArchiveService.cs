@@ -25,12 +25,12 @@ namespace ArchiveData.Services
             foreach (int uavNumber in archiveDto.UavNumbers)
             {
                 var collection = database.GetCollection<BsonDocument>(uavNumber.ToString());
-                var parameterFilters = archiveDto.ParametersNames.Select(p => 
-                     Builders<BsonDocument>.Filter.Exists($"Data.{p}")).ToList();
+                var parameterFilters = archiveDto.ParameterNames.Select(parameter => 
+                     Builders<BsonDocument>.Filter.Exists($"Data.{parameter}")).ToList();
 
                 var filter = Builders<BsonDocument>.Filter.And(
                     Builders<BsonDocument>.Filter.Gte("TimeStamp", archiveDto.StartDate),
-                    Builders<BsonDocument>.Filter.Lte("TimeStamp", archiveDto.EndDate),
+                    //Builders<BsonDocument>.Filter.Lte("TimeStamp", archiveDto.EndDate),
                     Builders<BsonDocument>.Filter.Eq("Communication", archiveDto.Communication),
                     Builders<BsonDocument>.Filter.Or(parameterFilters)
 
@@ -50,7 +50,7 @@ namespace ArchiveData.Services
                         Parameters = new Dictionary<string, string>()
                     };
 
-                    foreach (var param in archiveDto.ParametersNames)
+                    foreach (var param in archiveDto.ParameterNames)
                     {
                         dataPacket.Parameters[param] = doc["Data"].AsBsonDocument.Contains(param)
                             ? doc["Data"][param].ToString()

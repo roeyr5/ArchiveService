@@ -13,7 +13,7 @@ namespace ArchiveData.Models
             public string Communication { get; set; }
             public int PageNumber { get; set; }
             public int PageSize { get; set; }
-            public string[] ParametersNames { get; set; }
+            public string[] ParameterNames { get; set; }
 
     }
 }
